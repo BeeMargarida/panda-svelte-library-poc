@@ -1,31 +1,25 @@
-import { defineConfig } from "@pandacss/dev"
-import pandaPreset from '@pandacss/preset-panda';
-import { styledThemePreset } from "./src/lib/styles/preset"
+import { defineConfig } from '@pandacss/dev';
+import { styledThemePreset } from './src/lib/styles/preset';
 
 export default defineConfig({
-    // Whether to use css reset
-    preflight: true,
+	// Whether to use css reset
+	preflight: true,
 
-    prefix: 'panda-test',
+	prefix: 'panda-test',
 
-    presets: [styledThemePreset],
-    
-    // Where to look for your css declarations
-    include: [
-      // './node_modules/@panda-test/styled-system/src/**/*.tsx',
-      './src/**/*.{js,ts,svelte}'
-    ],
+	presets: [styledThemePreset],
 
-    // Files to exclude
-    exclude: [],
+	// Where to look for your css declarations
+	include: ['./src/**/*.{js,ts,svelte}'],
 
-    // Useful for theme customization
-    theme: {
-      extend: {}
-    },
+	// Files to exclude
+	exclude: [],
 
-    // The output directory for your css system
-    outdir: "styled-system",
-    // emitPackage: true,
-    // outdir: '@panda-test/styled-system'
-})
+	// Useful for theme customization
+	theme: {
+		extend: {}
+	},
+
+	// The output directory for your css system
+	outdir: 'styled-system'
+});

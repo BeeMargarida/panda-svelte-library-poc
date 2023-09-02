@@ -26,7 +26,7 @@
 			fontSize: size,
 			lineHeight: 1,
 			flexGrow: 0,
-			width: fullSize ? '100%' : 'fit-content',
+			width: fullSize ? '100%' : 'fit-content'
 		},
 		variants: {
 			visual: {
@@ -34,12 +34,12 @@
 					border: 'transparent',
 					backgroundColor: { base: `${color}.600`, _dark: `${color}.800` },
 					color: 'white',
-					'&:hover': { backgroundColor: `${color}.700` },
+					'&:hover': { backgroundColor: `${color}.700` }
 				},
 				outline: {
 					border: { base: `1px solid token(${color}.700)`, _dark: `1px solid token(${color}.400)` },
 					backgroundColor: 'transparent',
-					color: { base: `${color}.700`, _dark: `${color}.400` },
+					color: { base: `${color}.700`, _dark: `${color}.400` }
 				}
 			},
 			size: {
@@ -85,7 +85,7 @@
 				}
 			}
 		}
-	})
+	});
 </script>
 
 <button class={buttonStyle({ visual: 'filled', size: size })} on:click>

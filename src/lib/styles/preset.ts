@@ -1,6 +1,10 @@
 import { definePreset} from '@pandacss/dev';
 
 export const styledThemePreset = definePreset({
+    conditions: {
+        light: '.light &',
+        dark: '.dark &',
+    },
     theme: {
         tokens: {
             colors: {

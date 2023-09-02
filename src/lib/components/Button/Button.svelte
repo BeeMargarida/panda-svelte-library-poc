@@ -1,5 +1,4 @@
 <script lang="ts">
-	// import { css } from '@panda-test/styled-system/css';
 	import { cva } from 'styled-system/css';
 
 	export let color = 'blue';
@@ -7,7 +6,6 @@
 	export let size = 'sm';
 	export let fullSize = false;
 
-    // const style = css({ bg: 'red.300', px: '2', py: '3', color: 'dark.800' });
 	const buttonStyle = cva({
 		base: {
 			cursor: 'pointer',
@@ -34,14 +32,14 @@
 			visual: {
 				filled: {
 					border: 'transparent',
-					backgroundColor: `${color}.600`,
+					backgroundColor: { base: `${color}.600`, _dark: `${color}.800` },
 					color: 'white',
-					'&:hover': { backgroundColor: `${color}.700` }
+					'&:hover': { backgroundColor: `${color}.700` },
 				},
 				outline: {
-					border: `1px solid ${color}.700`,
+					border: { base: `1px solid token(${color}.700)`, _dark: `1px solid token(${color}.400)` },
 					backgroundColor: 'transparent',
-					color: `${color}.700`,
+					color: { base: `${color}.700`, _dark: `${color}.400` },
 				}
 			},
 			size: {
@@ -90,6 +88,6 @@
 	})
 </script>
 
-<button class={buttonStyle({ visual: 'filled', size: size })}>
+<button class={buttonStyle({ visual: 'filled', size: size })} on:click>
 	<slot />
 </button>

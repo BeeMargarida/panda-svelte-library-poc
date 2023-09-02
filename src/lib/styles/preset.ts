@@ -5,6 +5,12 @@ export const styledThemePreset = definePreset({
         light: '.light &',
         dark: '.dark &',
     },
+    globalCss: {
+        body: {
+            backgroundColor: { base: 'white', _dark: 'dark.700' },
+		    color: { base: 'black', _dark: 'dark.50'}
+        }
+    },
     theme: {
         tokens: {
             colors: {
